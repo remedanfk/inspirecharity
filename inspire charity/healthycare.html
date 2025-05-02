@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCare United</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background-color: #f5f9fc;
+      }
+
+      /* Header */
+      .header {
+        background-color: #005792;
+        color: white;
+        padding: 1rem;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-weight: 500;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            rgba(0, 87, 146, 0.8),
+            rgba(0, 87, 146, 0.8)
+          ),
+          url("hospital-hero.jpg") center/cover;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Services Section */
+      .services {
+        padding: 4rem 2rem;
+        background: white;
+      }
+
+      .section-title {
+        text-align: center;
+        color: #005792;
+        margin-bottom: 3rem;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .service-card {
+        background: #f5f9fc;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-card i {
+        font-size: 2.5rem;
+        color: #005792;
+        margin-bottom: 1rem;
+      }
+
+      /* Blood Donation Section */
+      .blood-donation {
+        background: #ff4d4d;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .donation-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 2rem 0;
+      }
+
+      .stat-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 10px;
+      }
+
+      /* Community Education */
+      .community {
+        padding: 4rem 2rem;
+        background: #f5f9fc;
+      }
+
+      .event-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .event-item {
+        background: white;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Gallery */
+      .gallery {
+        padding: 3rem 2rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery-item {
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Footer */
+      .footer {
+        background: #002348;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none; /* Add mobile menu later */
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .donation-stats {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Inspire charity</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#blood">Blood Donation</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div>
+        <h1>we serve the community in health sector ensuring their wel being</h1>
+        <p>
+           Medical Care | Blood Donation Drives | Community Health Education
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h2 class="section-title">Our Healthcare Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-hospital"></i>
+          <h3>Hospital Facilities</h3>
+          <p>Emergency care, surgery, maternity, and specialized treatments</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Blood Donation</h3>
+          <p>Join our life-saving blood donation campaigns 20+ Round</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-book-medical"></i>
+          <h3>Health Education</h3>
+          <p>Free workshops on disease prevention and wellness</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blood Donation Section -->
+    <section class="blood-donation" id="blood">
+      <h2 class="section-title">Save Lives Through Blood Donation</h2>
+      <div class="donation-stats">
+        <div class="stat-box">
+          <h3>10,000+</h3>
+          <p>Lives Saved</p>
+        </div>
+        <div class="stat-box">
+          <h3>Monthly Drives</h3>
+          <p>Join Our Next Event</p>
+        </div>
+      </div>
+      <button class="cta-button">Schedule Donation</button>
+    </section>
+
+    <!-- Community Education -->
+    <section class="community">
+      <h2 class="section-title">Community Health Programs</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <h3>Diabetes Awareness Workshop - June 30</h3>
+          <p>Free screening and expert talks</p>
+        </div>
+        <div class="event-item">
+          <h3>Mental Health Seminar - August 30</h3>
+          <p>Learn stress management techniques</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+      <h2 class="section-title">Our Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="./helthy1.jpg" alt="Blood Donation Event" />
+        </div>
+        <div class="gallery-item">
+          <img src="./blood2.jpg" alt="Modern Hospital Facilities" />
+        </div>
+        <div class="gallery-item">
+          <img src="./blood3.jpg" alt="Community Education" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    
+      <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+
+    <!-- Script for Smooth Scrolling -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

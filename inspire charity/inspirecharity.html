@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspire Charity & Development Association</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Header Styles */
+      header {
+        background: white;
+        padding: 1rem 5%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #2c3e50;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .logo-text {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .logo-text span:first-child {
+        color: red;
+      }
+
+      .logo-text span:last-child {
+        color: #2c3e50;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #e91e63;
+      }
+
+      /* Home Section */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 70px;
+        flex-direction: column;
+      }
+
+      .slogan {
+        color: white;
+        font-size: 3rem;
+        animation: sloganAnim 2s ease-out;
+        margin-bottom: 1rem;
+      }
+
+      .charity-name {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+
+      @keyframes sloganAnim {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .about-section {
+        padding: 5rem 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .about-images {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .about-img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      /* Services & Achievements Sections */
+      .services,
+      .achievements {
+        padding: 5rem 5%;
+        text-align: center;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem auto;
+        max-width: 1200px;
+      }
+
+      .service-card,
+      .achievement-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        transition: all 0.3s;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .service-card:hover,
+      .achievement-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card:hover .service-icon {
+        color: #2c3e50;
+      }
+      .achievement-card:hover .achievement-icon {
+        color: #2c3e50;
+        }
+
+      .service-icon,
+      .achievement-icon {
+        font-size: 2.5rem;
+        color: #ff6b35;
+        margin-bottom: 1rem;
+        transition: color 0.3s;
+      }
+
+      /* Footer Styles */
+      footer {
+        background: #2c3e50;
+        color: white;
+        padding: 3rem 5%;
+        margin-top: 5rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #e91e63;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .slogan {
+          font-size: 2rem;
+        }
+
+        .about-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./insipre.jpg" alt="Inspire Charity Logo" />
+        <div class="logo-text">
+          <span>INSPIRE</span>
+          <span>CHARITY</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1 class="slogan">Empowering Communities, Transforming Lives</h1>
+      <p class="charity-name">Inspire Charity and Development Association</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-content">
+        <div class="history">
+          <h2>Our History</h2>
+          <p>
+            Founded in 2010, by Abdulmelik seyfadin, Inspire Charity has been at the forefront of
+            community development...
+          </p>
+        </div>
+        <div class="vision">
+          <h2>Our Vision</h2>
+          <p>
+            To create sustainable communities where everyone has equal
+            opportunities...Inspire Charity & Development Association is a non-profit organization
+        dedicated to creating sustainable change through community empowerment
+        and development initiatives. Founded in 2010, we have impacted millions
+        of lives through education, healthcare, and economic empowerment
+        programs. Our mission is to break the cycle of poverty through
+        innovative solutions and community-led development. We work in
+        partnership with local communities to create lasting transformation and
+        sustainable growth.
+          </p>
+        </div>
+        <div class="mission">
+          <h2>Our Mission</h2>
+          <p>
+            To empower communities through education, healthcare, and economic
+            support..Inspire Charity & Development Association is a non-profit organization
+        dedicated to creating sustainable change through community empowerment
+        and development initiatives. Founded in 2010, we have impacted millions
+        of lives through education, healthcare, and economic empowerment
+        programs. Our mission is to break the cycle of poverty through
+        innovative solutions and community-led development. We work in
+        partnership with local communities to create lasting transformation and
+        sustainable growth..
+          </p>
+        </div>
+      </div>
+      <div class="about-images">
+        <img src="./dhiiga 2.jpg" alt="Community Support" class="about-img" />
+  
+    </section>
+
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <div class="section-grid">
+        <a href="./education.html" class="service-card">
+          <i class="fas fa-school service-icon"></i>
+          <h3>Education</h3>
+          <p>School construction and scholarship programs</p>
+        </a>
+
+        <a href="./healthycare.html" class="service-card">
+          <i class="fas fa-hospital service-icon"></i>
+          <h3>Healthcare</h3>
+          <p>Medical camps and vaccination drives</p>
+        </a>
+
+        <a href="#empowerment" class="service-card">
+          <i class="fas fa-hands-helping service-icon"></i>
+          <h3>Community Empowerment</h3>
+          <p>Leadership and skill development programs</p>
+        </a>
+
+        <a href="#economy" class="service-card">
+          <i class="fas fa-chart-line service-icon"></i>
+          <h3>Economic Sector</h3>
+          <p>Microfinance and business support</p>
+        </a>
+
+        <a href="#volunteering" class="service-card">
+          <i class="fas fa-hands service-icon"></i>
+          <h3>Volunteering</h3>
+          <p>Join our global volunteer network</p>
+        </a>
+
+        <a href="#food" class="service-card">
+          <i class="fas fa-utensils service-icon"></i>
+          <h3>Food & Shelter</h3>
+          <p>Emergency relief and housing support</p>
+        </a>
+
+        <a href="#development" class="service-card">
+          <i class="fas fa-globe service-icon"></i>
+          <h3>Country Development</h3>
+          <p>Infrastructure and policy support</p>
+        </a>
+
+        <a href="#water" class="service-card">
+          <i class="fas fa-tint service-icon"></i>
+          <h3>Water Supply</h3>
+          <p>Clean water access initiatives</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="achievements" id="achievements">
+      <h2>Our Achievements</h2>
+      <div class="section-grid">
+        <a href="./reward.html" class="achievement-card">
+          <i class="fas fa-award achievement-icon"></i>
+          <h3>Rewards</h3>
+          <p>15+ Recognition awards</p>
+        </a>
+
+        <a href="#certificates" class="achievement-card">
+          <i class="fas fa-certificate achievement-icon"></i>
+          <h3>Certificates</h3>
+          <p>Accredited by global organizations</p>
+        </a>
+
+        <a href="#funds" class="achievement-card">
+          <i class="fas fa-hand-holding-usd achievement-icon"></i>
+          <h3>Funds Managed</h3>
+          <p>$50M+ in development funds</p>
+        </a>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <div>
+          <h3>Contact us</h3>
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Shashamane, Ethiopia</p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <p>+251 93 161 6250</p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p>info@inspirecharity.org</p>
+          </div>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100070357418191"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@inspire33?_t=ZM-8vzftKDJ445&_r=1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/sudeiszb"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025. All rights reserved.Developed by Remedan F.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
